@@ -1,9 +1,12 @@
 import  { Routes, Route } from 'react-router-dom'
-import Header from './Header';
-import Main from './Main';
-import About from './About'
-import Sidebar from './Sidebar';
-import Footer from './Footer';
+import Header from './components/Header';
+import Home from './pages/Home';
+import About from './pages/About';
+import Shop from './pages/Shop';
+import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import Sidebar from './components/Sidebar';
+import Footer from './components/Footer';
 import './App.css';
 
 export default function App() {
@@ -13,22 +16,15 @@ export default function App() {
     <div className = "wrapper">
       <Sidebar />
       <Routes>
-        <Route path = "/" element = {<Main />}/>
+        <Route path = "/" element = {<Home />}/>
         <Route path = "/about" element = {<About />}/>
+        <Route path = "/shop" element = {<Shop />}/>
+        <Route path = "/blog" element = {<Blog />}/>
+        <Route path = "/contact" element = {<Contact />}/>
         <Route />
       </Routes>
     </div>
     <Footer />
     </div>
   );
-  // return (
-  //   <div className = "container">
-  //     <Header />
-  //     <div className = "wrapper">
-  //       <Main />
-  //       <Sidebar />
-  //     </div>
-  //     <Footer />
-  //   </div>
-  // )
 }

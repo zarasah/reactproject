@@ -1,0 +1,21 @@
+.sidebar ul {
+    list-style-type: none;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.sidebar li {
+    margin-top: 15px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: black;
+    font-size: small;
+}
+
+.sidebar a:hover {
+    font-weight: 600;
+    background-color: rgb(246, 190, 141);
+    border-radius: 30%;
+}
