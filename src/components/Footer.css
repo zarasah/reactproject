@@ -1,0 +1,30 @@
+.footer h5 {
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    font-size: small;
+}
+
+.footer a {
+    text-decoration: none;
+    color: grey;
+}
+
+.footer li {
+    margin-top: 10px;
+}
+
+.brands {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 25px;
+}
+
+.footer a:hover {
+    color: rgb(246, 190, 141);;
+}

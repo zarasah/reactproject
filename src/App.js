@@ -1,4 +1,4 @@
-import  { Routes, Route } from 'react-router-dom'
+import  { Routes, Route, useParams } from 'react-router-dom'
 import Header from './components/Header';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -7,7 +7,9 @@ import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
+import Selected from './components/Selected';
 import './App.css';
+
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
         <Route path = "/shop" element = {<Shop />}/>
         <Route path = "/blog" element = {<Blog />}/>
         <Route path = "/contact" element = {<Contact />}/>
+        <Route path = "/:id" element = {<Selected />}/>
         <Route />
       </Routes>
     </div>
