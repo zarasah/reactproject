@@ -12,9 +12,9 @@ export default function Item(props) {
         setActive(false);
     }
 
-    function click() {
+    // function click() {
         
-    }
+    // }
 
     return (
         <div className = "item" onMouseOver={handleMouseOver} onMouseOut = {handleMouseOut}>
@@ -24,7 +24,7 @@ export default function Item(props) {
             <div className = "discrip">
                 <h4>{name}</h4>
                 <p>$ {price} USD</p>
-                <input type = "submit" value = "ADD TO CART" className = {isActive ? 'add-btn-active' : 'add-btn'} onClick = {click}/>
+                <input type = "submit" value = "ADD TO CART" className = {isActive ? 'add-btn-active' : 'add-btn'} onClick = {() => {props.onAdd(props.data)}}/>
             </div>
         </div>
     )

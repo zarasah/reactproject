@@ -4,11 +4,11 @@ import Item from './Item';
 
 const data = Object.values(Data);
 
-export default function Main() {
+export default function Main(props) {
     return (
         <div className = "items">
             {data.map((data) => {
-                return <Item key = {data.id} data = {data}/>
+                return <Item key = {data.id} data = {data} onAdd = {props.onAdd}/>
             })}
         </div>
     )
