@@ -1,11 +1,14 @@
 .sidebar ul {
+    width: 100%;
     list-style-type: none;
     margin-left: 50px;
     margin-top: 20px;
 }
 
 .sidebar li {
+    min-width: 80px;
     margin-top: 15px;
+    width: 100%;
 }
 
 .sidebar a {

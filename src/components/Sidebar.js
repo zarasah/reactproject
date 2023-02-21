@@ -1,16 +1,16 @@
+import { Link } from 'react-router-dom';
 import './Sidebar.css'
 
 export default function Sidebar() {
     return (
         <div className = "sidebar">
-            {/* <nav>Sidebar</nav> */}
             <h4>Categories</h4>
                 <ul>
-                    <li><a href = "/#">All products</a></li>
-                    <li><a href = "/#">Accessories</a></li>
-                    <li><a href = "/#">Clothes</a></li>
-                    <li><a href = "/#">Perfume</a></li>
-                    <li><a href = "/#">Shoes</a></li>
+                    <li><Link to = "/#">All products</Link></li>
+                    <li><Link to = "/#">Accessories</Link></li>
+                    <li><Link to = "/#">Clothes</Link></li>
+                    <li><Link to = "/#">Perfume</Link></li>
+                    <li><Link to = "/#">Shoes</Link></li>
                 </ul>
         </div>
     );

@@ -1,8 +1,10 @@
 .basket {
+    width: 40px;
     margin-left: 20px;
     display: flex;
     position: relative;
     justify-content: center;
+    align-items: center;
 }
 
 .basket-icon {

@@ -8,7 +8,7 @@ export default function Main(props) {
     return (
         <div className = "items">
             {data.map((data) => {
-                return <Item key = {data.id} data = {data} onAdd = {props.onAdd}/>
+                return <Item key = {data.id} data = {data} onAdd = {props.onAdd} onHistory = {props.onHistory}/>
             })}
         </div>
     )

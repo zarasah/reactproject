@@ -10,11 +10,13 @@ import Sidebar from './components/Sidebar';
 import Footer from './components/Footer';
 import Selected from './components/Selected';
 import Basket from './pages/Basket';
+import Featured from './components/Featured';
 import './App.css';
 
 export default function App() {
   const [orders, setOrders] = useState([]);
   let [count, setCount] = useState(0);
+  const [history, setHistory] = useState([]);
 
   function counter() {
     count++;
@@ -43,13 +45,30 @@ export default function App() {
     }
   }
 
+  function addToHistory(item) {
+    if (history.length === 0) {
+      setHistory([item, ...history]);
+    }
+
+    for (let element of history) {
+      if (item.id === element.id) {
+        setHistory([...history]);
+        break;
+      }
+      setHistory([item, ...history]);
+    }
+  }
+
   return (
     <div className = "container">
     <Header count = {count}/>
     <div className = "wrapper">
-      <Sidebar />
+      <div className = 'side'>
+        <Sidebar />
+        <Featured data = {history}/>
+      </div>
       <Routes>
-        <Route path = "/" element = {<Home onAdd = {addToOrder} />}/>
+        <Route path = "/" element = {<Home onAdd = {addToOrder} onHistory = {addToHistory}/>}/>
         <Route path = "/about" element = {<About />}/>
         <Route path = "/shop" element = {<Shop />}/>
         <Route path = "/blog" element = {<Blog />}/>

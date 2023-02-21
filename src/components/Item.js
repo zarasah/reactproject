@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Item(props) {
     const { name, price, img, id } = props.data;
@@ -13,9 +14,9 @@ export default function Item(props) {
     }
 
     return (
-        <div className = "item" onMouseOver={handleMouseOver} onMouseOut = {handleMouseOut}>
+        <div className = "item" onMouseOver={handleMouseOver} onMouseOut = {handleMouseOut} onClick = {() => {props.onHistory(props.data)}}>
             <div>
-                <a href = {id}><img src = {img} alt = {name} className = "item-img"/></a>
+                <Link to = {`${id}`}><img src = {img} alt = {name} className = "item-img"/></Link>
             </div>
             <div className = "discrip">
                 <h4>{name}</h4>
