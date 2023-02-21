@@ -7,12 +7,3 @@ export default function Home(props) {
         </div>
     );
 }
-
-
-// export default function Main() {
-//     return (
-//         <div className="main">
-//             Main
-//         </div>
-//     );
-// }

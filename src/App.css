@@ -13,7 +13,6 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 5px;
-    /* flex-direction: row; */
 }
 
 .header {
@@ -27,26 +26,27 @@
 
 .about {
     width: 85%;
-    height: 300px;
-    border: 2px solid rgb(144, 246, 49);
+    padding: 70px;
+    font-size: xx-large;
 }
 
 .shop {
     width: 85%;
-    height: 300px;
-    border: 2px solid rgb(144, 246, 49);
+    padding: 70px;
+    font-size: xx-large;
 }
 
 .blog {
     width: 85%;
-    height: 300px;
-    border: 2px solid rgb(144, 246, 49);
+    padding: 70px;
+    font-size: xx-large;
 }
 
 .contact {
     width: 85%;
-    height: 300px;
-    border: 2px solid rgb(144, 246, 49);
+    padding: 70px;
+    font-size: xx-large;
+    
 }
 
 .sidebar {
@@ -85,7 +85,7 @@
 .basket-page-item {
     display: flex;
     align-items: center;
-    gap: 15%;
+    justify-content: space-between;
     border-bottom: 1px solid rgb(186, 186, 186);
 }
 

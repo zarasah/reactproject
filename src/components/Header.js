@@ -3,7 +3,7 @@ import Search from './Search';
 import Basket from './Basket';
 import './Header.css';
 
-export default function Header() {
+export default function Header(props) {
     return (
         <div className = "header">
             <div className = "header-left">
@@ -20,7 +20,7 @@ export default function Header() {
             </div>
             <div className = "header-right">
                 <Search />
-                <Basket />
+                <Basket count = {props.count}/>
             </div>
         </div>
     );

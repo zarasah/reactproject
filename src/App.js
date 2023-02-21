@@ -14,15 +14,38 @@ import './App.css';
 
 export default function App() {
   const [orders, setOrders] = useState([]);
+  let [count, setCount] = useState(0);
+
+  function counter() {
+    count++;
+    setCount(count);
+  }
 
   function addToOrder(item) {
-    setOrders([...orders, item]);
-    // console.log(orders);
+    counter();
+    const newItem = {...item};
+    const price = item.price;
+
+    if (orders.length === 0) {
+      newItem.count = 1;
+      setOrders([newItem]);
+    } else {
+      for (let i = 0; i < orders.length; i++) {
+        if (newItem.id === orders[i].id) {
+          orders[i].count += 1;
+          orders[i].price = orders[i].count * price ;
+          setOrders([...orders]);
+          break;
+        }
+        newItem.count = 1;
+        setOrders([...orders, newItem]);
+      }
+    }
   }
 
   return (
     <div className = "container">
-    <Header />
+    <Header count = {count}/>
     <div className = "wrapper">
       <Sidebar />
       <Routes>

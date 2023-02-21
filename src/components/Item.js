@@ -12,10 +12,6 @@ export default function Item(props) {
         setActive(false);
     }
 
-    // function click() {
-        
-    // }
-
     return (
         <div className = "item" onMouseOver={handleMouseOver} onMouseOut = {handleMouseOut}>
             <div>
