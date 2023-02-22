@@ -97,6 +97,11 @@
     border-bottom: 1px solid rgb(186, 186, 186);
 }
 
+.basket-page-item :nth-child(2) {
+    /* background-color: aquamarine; */
+    flex-basis: 250px;
+}
+
 .basket-page-item p {
     font-size: small;
     margin: 0;
