@@ -26,7 +26,7 @@ export default function App() {
     counter();
     const newItem = {...item};
     const price = item.price;
-    debugger;
+    
     if (orders.length === 0) {
       newItem.count = 1;
       setOrders([newItem]);
@@ -50,13 +50,13 @@ export default function App() {
 
   function addToHistory(item) {
     if (history.length === 0) {
-      setHistory([item, ...history]);
+      setHistory([item]);
+      return;
     }
 
     for (let element of history) {
       if (item.id === element.id) {
-        setHistory([...history]);
-        break;
+        return;
       }
       setHistory([item, ...history]);
     }
