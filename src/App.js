@@ -15,7 +15,7 @@ import './App.css';
 
 export default function App() {
   const [orders, setOrders] = useState([]);
-  let [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
   const [history, setHistory] = useState([]);
 
   function counter() {
@@ -35,7 +35,6 @@ export default function App() {
         if (newItem.id === orders[i].id) {
 
           setOrders((item) => {
-            console.log(i)
             item[i].count += 1;
             item[i].price = item[i].count * price ;
             return item;
@@ -56,6 +55,7 @@ export default function App() {
 
     for (let element of history) {
       if (item.id === element.id) {
+        setHistory([...history]);
         return;
       }
       setHistory([item, ...history]);

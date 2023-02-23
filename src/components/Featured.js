@@ -6,7 +6,7 @@ export default function Featured(props) {
     if (data.length > 3) {
         data.pop();
     }
-    console.log(data)
+
     return (
         <>
         <h4>Featured</h4>
