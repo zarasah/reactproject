@@ -19,29 +19,32 @@ export default function App() {
   const [history, setHistory] = useState([]);
 
   function counter() {
-    count++;
-    setCount(count);
+    setCount(count + 1);
   }
 
   function addToOrder(item) {
     counter();
     const newItem = {...item};
     const price = item.price;
-
+    debugger;
     if (orders.length === 0) {
       newItem.count = 1;
       setOrders([newItem]);
     } else {
       for (let i = 0; i < orders.length; i++) {
         if (newItem.id === orders[i].id) {
-          orders[i].count += 1;
-          orders[i].price = orders[i].count * price ;
-          setOrders([...orders]);
-          break;
+
+          setOrders((item) => {
+            console.log(i)
+            item[i].count += 1;
+            item[i].price = item[i].count * price ;
+            return item;
+          })
+          return;
         }
-        newItem.count = 1;
-        setOrders([...orders, newItem]);
       }
+      newItem.count = 1;
+      setOrders([...orders, newItem]);
     }
   }
 
