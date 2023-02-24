@@ -19,7 +19,7 @@ export default function Header(props) {
                 </div>
             </div>
             <div className = "header-right">
-                <Search />
+                <Search search = {props.search}/>
                 <Basket count = {props.count}/>
             </div>
         </div>

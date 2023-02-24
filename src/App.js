@@ -17,6 +17,7 @@ export default function App() {
   const [orders, setOrders] = useState([]);
   const [count, setCount] = useState(0);
   const [history, setHistory] = useState([]);
+  const [searchKey, setSearchKey] = useState('');
 
   function counter() {
     setCount(count + 1);
@@ -62,16 +63,20 @@ export default function App() {
     }
   }
 
+  function forSearch(curChar) {
+    setSearchKey(curChar);
+  }
+
   return (
     <div className = "container">
-    <Header count = {count}/>
+    <Header count = {count} search = {forSearch}/>
     <div className = "wrapper">
       <div className = 'side'>
         <Sidebar />
         <Featured data = {history}/>
       </div>
       <Routes>
-        <Route path = "/" element = {<Home onAdd = {addToOrder} onHistory = {addToHistory}/>}/>
+        <Route path = "/" element = {<Home onAdd = {addToOrder} onHistory = {addToHistory} filter = {searchKey}/>}/>
         <Route path = "/about" element = {<About />}/>
         <Route path = "/shop" element = {<Shop />}/>
         <Route path = "/blog" element = {<Blog />}/>
