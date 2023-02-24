@@ -73,12 +73,13 @@
 }
 
 .basket-page-empty {
-    margin-top: 5%;
+    margin-top: 2%;
     width: 85%;
 }
 
 .basket-page-empty p {
-    text-align: center;
+    padding-left: 70px;
+    font-size: xx-large;
 }
 
 .basket-page {
@@ -98,7 +99,6 @@
 }
 
 .basket-page-item :nth-child(2) {
-    /* background-color: aquamarine; */
     flex-basis: 250px;
 }
 
