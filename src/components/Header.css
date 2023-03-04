@@ -1,5 +1,4 @@
 .header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -9,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    margin-left: 10%;
 }
 
 .header-right {
@@ -16,6 +16,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    margin-right: 10%;
 }
 
 .logo img {
